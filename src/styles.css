@@ -10,12 +10,13 @@ body {
 h1 {
   margin: 0;
   padding: 0;
+  color:pink;
 }
 .custom-form {
   min-width: 300px;
   max-width: 60%;
   margin: 0px auto;
-  background: rgba(255, 255, 255, 0.15);
+  background: pink;
   padding: 2rem 3rem;
   margin: auto;
   border-radius: 2.5rem;
@@ -34,7 +35,7 @@ h1 {
   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
       rgba(0, 0, 0, 0.1);
   border: 0 none;
-  background: #ebf5fc;
+  background: pink;
 }
 .custom-form button {
   text-transform: uppercase;
@@ -48,6 +49,8 @@ h1 {
   display: block;
   padding: 0.875rem 1rem;
   border-radius: 1.5rem;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  box-shadow: 3px 3px 8px pink, -3px -3px 8px #ffffff;
   cursor: pointer;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
