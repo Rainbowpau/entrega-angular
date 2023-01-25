@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { UsersService } from "../users/users.service";
 
 
@@ -8,14 +9,13 @@ import { UsersService } from "../users/users.service";
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-export class HomeComponent implements OnInit {
-  constructor(public userService: UsersService) {}
-  ngOnInit() {
-    this.getUserLogged();
+export class HomeComponent {
+  constructor(public userService: UsersService, public router: Router) {}
+
+  goToLogin() {
+    this.router.navigateByUrl('/login');
   }
-  getUserLogged() {
-    this.userService.getUser().subscribe((user: any) => {
-      console.log(user);
-    });
+  goToRegister() {
+    this.router.navigateByUrl('/register');
   }
 }

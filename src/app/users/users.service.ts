@@ -16,16 +16,15 @@ export class UsersService {
     return this.http.post("/api/users", user);
   }
 
-  setToken(token: string) {
-    this.cookies.set("token", token);
+  setUser(user: string) {
+    this.cookies.set("user", user);
   }
 
-  getToken() {
-    return this.cookies.get("token");
+  getUser() {
+    return this.cookies.get("user");
   }
-  getUserLogged() {
-    const token = this.getToken();
-    // Aquí iría el endpoint para devolver el usuario para un token
+  
+  LogOut() {
+    this.cookies.delete("user");
   }
-  getUser: any
 }
